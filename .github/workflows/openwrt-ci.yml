@@ -53,12 +53,12 @@ jobs:
 
           df -h
 
-      - name: 自定义主题
+      - name: 自定义插件
         run: |
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git clone https://github.com/Leo-Jo/luci-app-ssr-plus-jo.git
+          git clone https://github.com/nick7529/luci-app-ssr-plus-jo.git
           git clone https://github.com/rosywrt/luci-theme-rosy.git
           git clone https://github.com/apollo-ng/luci-theme-darkmatter.git
 
@@ -182,12 +182,12 @@ jobs:
           CONFIG_PACKAGE_luci-app-samba4=y
           CONFIG_PACKAGE_luci-app-sfe=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_kcptun=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_kcptun=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_Shadowsocks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_ShadowsocksR_Server=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_ShadowsocksR_Socks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_V2ray=y
+          CONFIG_PACKAGE_luci-app-ssr-plus-jo_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssrserver-python=y
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
@@ -206,7 +206,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-splash=y
           CONFIG_PACKAGE_luci-app-syncdial=y
           CONFIG_PACKAGE_luci-app-smartdns=y
-          CONFIG_PACKAGE_luci-app-ssr-plus-jo=y
           EOF
 
           # LuCI主题:
